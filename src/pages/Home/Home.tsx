@@ -71,6 +71,86 @@ function Home() {
         }
     }
 
+    const popularPosts : Array<PostType> = [
+        {
+            id : 5 , category : 'Travel' , date : '13 March 2023' ,
+            title : 'Train Or Bus Journey?Which one suits?',
+            description : 'The choice between a train or bus journey depends on various factors such as the distance of the journey, the time available, the cost, and person ',
+            src : './assets/images/posts/martin-sanchez-pfkzBUh4KyA-unsplash.webp',
+            alt : 'train-or-bus-journey-which-one-suits',
+            caption : 'train-or-bus-journey-which-one-suits',
+            link : 'post',
+            style : {
+                figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
+                image : 'w-full h-full'
+            }
+        },
+        {
+            id : 6 , category : 'DEVELOPMENT' , date : '11 March 2023' ,
+            title : 'Best Website to research for your  next project',
+            description : 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs',
+            src : './assets/images/posts/igor-miske-JVSgcV8_vb4-unsplash.webp',
+            alt : 'best-website-to-research-for-your-next-project',
+            caption : 'best-website-to-research-for-your-next-project',
+            link : 'post',
+            style : {
+                figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
+                image : 'w-full h-full'
+            }
+        },
+        {
+            id : 7 , category : 'Sports' , date : '10 March 2023' ,
+            title : 'How to Be a Dancer in 2023 with proper skills?',
+            description : 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+            src : './assets/images/posts/breakreate-tFA3kJcMUco-unsplash.webp',
+            alt : 'how-to-be-a-dancer-in-2023-with-proper-skills',
+            caption : 'how-to-be-a-dancer-in-2023-with-proper-skills',
+            link : 'post',
+            style : {
+                figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
+                image : 'w-full h-full'
+            }
+        },
+        {
+            id : 8 , category : 'Travel' , date : '13 March 2023' ,
+            title : 'Who is the best singer on chart?Know him?',
+            description : 'chart by Billboard which ranks the all-time greatest artists based on their performance on the weekly Billboard Hot 100 and  ',
+            src : './assets/images/posts/austin-neill-hgO1wFPXl3I-unsplash.webp',
+            alt : 'who-is-the-best-singer-on-chart-know-him',
+            caption : 'who-is-the-best-singer-on-chart-know-him',
+            link : 'post',
+            style : {
+                figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
+                image : 'w-full h-full'
+            }
+        },
+        {
+            id : 9 , category : 'DEVELOPMENT' , date : '13 March 2023' ,
+            title : 'How to start export import business from home?',
+            description : 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs ',
+            src : './assets/images/posts/Image Placeholder.png',
+            alt : 'how-to-start-export-import-business-from-home',
+            caption : 'how-to-start-export-import-business-from-home',
+            link : 'post',
+            style : {
+                figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
+                image : 'w-full h-full'
+            }
+        },
+        {
+            id : 10 , category : 'Sports' , date : '10 March 2023' ,
+            title : 'Make some drinks with chocolates chocolates and milk',
+            description : 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive',
+            src : './assets/images/posts/Image Placeholder2.png',
+            alt : 'make-some-drinks-with-chocolates-chocolates-and-milk',
+            caption : 'make-some-drinks-with-chocolates-chocolates-and-milk',
+            link : 'post',
+            style : {
+                figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
+                image : 'w-full h-full'
+            }
+        },
+    ];
 
     return (
         <>
@@ -154,7 +234,25 @@ function Home() {
                             </article>
                         }
 
-                        { recentPosts.map( post => <Post key={`post-${post.id}`} {...post} />  ) }
+                        { recentPosts.map( post => <Post key={`recentPost-${post.id}`} {...post} />  ) }
+                    </div>
+
+                </section>
+
+                {/* Popular Posts */}
+                <section className="w-full flex flex-col items-center gap-10 mt-20 padding-x">
+
+                    <header className="container flex items-center justify-between">
+
+                        <h2 className="text-2xl lg:text-4xl font-bold">Popular Post</h2>
+                        <Link to='popular-posts' className="w-fit font-bold text-xs lg:text-sm text-white bg-primary px-8 lg:px-12 py-3 rounded-md">
+                            Read more
+                        </Link>
+
+                    </header>
+
+                    <div className="container grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        { popularPosts.map( post => <Post key={`popularPost-${post.id}`} {...post} />  ) }
                     </div>
 
                 </section>
