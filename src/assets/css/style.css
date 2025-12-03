@@ -2,6 +2,7 @@
 
 @theme{
     --color-primary : #7C4EE4;
+    --black-2 : #333333;
 }
 
 @font-face {
@@ -18,12 +19,98 @@
     img{
         object-fit: cover;
     }
+    @keyframes fill {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(0); }
+    }
+
+    .animate-fill {
+        animation: fill 2s linear infinite;
+    }
 }
 @layer components{
+
     .padding-x{
-        @apply px-6;
+        @apply px-8;
         @apply sm:px-10;
         @apply md:px-14;
+    }
+
+    *:has(.lazy-image-loader){
+        position: relative;
+    }
+    .lazy-image-loader {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #FFF;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .lazy-image-loader:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width:90%;
+        height:90%;
+        transform: rotate(45deg) translate(30%, 40%);
+        background: #6d3cdd;
+        box-shadow: 32px -40px 0 5px var(--color-primary);
+        animation: slide 2s infinite ease-in-out alternate;
+    }
+    .lazy-image-loader:after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: clamp(15px , 10% , 50px);
+        width: clamp(10px , 10% , 30px);
+        height: clamp(10px , 10% , 30px);
+        border-radius: 50%;
+        background: var(--color-primary);
+        transform: rotate(0deg);
+        transform-origin: 20px 145px;
+        animation: rotate 2s infinite ease-in-out;
+    }
+    @keyframes slide {
+        0% , 100% {
+            bottom: -35px
+        }
+
+        25% , 75% {
+            bottom: -2px
+        }
+
+        20% , 80% {
+            bottom: 2px
+        }
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(-15deg)
+        }
+
+        25% , 75% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(30deg)
+        }
+    }
+    .lazy-image-loader img::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: #FFFFFF;
+    }
+    .lazy-image-loader.fade {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
     }
 }
 #hero-section::before , #hero-section::after{

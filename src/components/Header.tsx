@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 function Header(){
     return(
-        <header className="w-full flex justify-center bg-white py-6 padding-x relative z-50">
+        <header className="w-full flex justify-center bg-white py-6 relative z-50 padding-x">
             <div className="container flex items-center justify-between">
 
                 {/* Logo */}
