@@ -27,7 +27,7 @@ function Post( { title , description , category , date , link , src , alt , capt
 
             <section className="w-full flex flex-col gap-5">
 
-                <p className="text-xs md:text-sm lg:text-base text-[#666666] leading-7">
+                <p className="text-xs md:text-sm lg:text-base text-[#666666] leading-7 line-clamp-3">
                     {description}
                 </p>
 

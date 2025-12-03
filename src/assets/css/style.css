@@ -113,17 +113,18 @@
         transition: opacity 0.5s ease-in-out;
     }
 }
-#hero-section::before , #hero-section::after{
+#hero-section::before , #hero-section::after,
+#subscribe::before , #subscribe::after {
     content: url("../assets/icons/hero-section-shape.svg");
     @apply hidden xl:block;
     position: absolute;
     z-index: 1;
 }
-#hero-section::before{
+#hero-section::before , #subscribe::before{
     top: 0;
     left: 0;
 }
-#hero-section::after{
+#hero-section::after , #subscribe::after {
     bottom: 0;
     right: 0;
     rotate: 180deg;

@@ -2,6 +2,7 @@ import Header from "../../components/Header.tsx";
 import {Link} from "react-router-dom";
 import Image from "../../components/Image.tsx";
 import Post, {type PostType} from "../../components/Post.tsx";
+import Footer from "../../components/Footer.tsx";
 
 function Home() {
 
@@ -66,7 +67,7 @@ function Home() {
     const firstRecentPost : PostType | undefined = recentPosts.shift();
     if( firstRecentPost ){
         firstRecentPost.style = {
-            figure : 'min-w-[700px] h-[400px] rounded-2xl overflow-hidden',
+            figure : 'w-full xl:min-w-[700px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden',
             image : 'w-full h-full'
         }
     }
@@ -205,7 +206,7 @@ function Home() {
 
                         {/* First Recent Posts */}
                         { (firstRecentPost && recentPosts.length >= 3) &&
-                            <article className="w-full flex gap-14 col-span-3 mb-16">
+                            <article className="w-full flex flex-col md:flex-row gap-6 xl:gap-14 md:col-span-2 lg:col-span-3 mb-16">
 
                                 <Image src={firstRecentPost.src} alt={firstRecentPost.alt} caption={firstRecentPost.caption} style={firstRecentPost.style} />
 
@@ -221,7 +222,7 @@ function Home() {
                                         <h3 className="font-bold md:text-lg lg:text-3xl">{firstRecentPost.title}</h3>
                                     </header>
 
-                                    <p className="text-xs md:text-sm lg:text-base text-[#666666] leading-7">
+                                    <p className="text-xs md:text-sm lg:text-base text-[#666666] leading-7 line-clamp-6">
                                         {firstRecentPost.description}
                                     </p>
 
@@ -258,6 +259,7 @@ function Home() {
                 </section>
 
             </main>
+            <Footer/>
         </>
     )
 

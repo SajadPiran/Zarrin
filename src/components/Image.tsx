@@ -15,7 +15,6 @@ function Image( { src, alt , caption , style }  : ImageProps ){
     const [ref , visible] = useLazyLoad( { threshold : 0.5 } );
     const imageRef = useRef<HTMLImageElement>(null);
     const imageLoaderRef = useRef<HTMLDivElement>(null);
-    console.log(ref)
     const loadImage = () => {
         if(imageLoaderRef.current){
             imageLoaderRef.current.classList.add('fade');
