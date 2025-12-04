@@ -64,9 +64,10 @@ function Home() {
 
         }
     ];
-    const firstRecentPost : PostType | undefined = recentPosts.shift();
-    if( firstRecentPost ){
-        firstRecentPost.style = {
+    let firstRecentPost : PostType | undefined = undefined;
+    if( recentPosts.length >= 4 ){
+        firstRecentPost = recentPosts.shift();
+        firstRecentPost!.style = {
             figure : 'w-full xl:min-w-[700px] h-[300px] md:h-[420px] rounded-2xl overflow-hidden',
             image : 'w-full h-full'
         }
@@ -191,7 +192,7 @@ function Home() {
                 </section>
 
                 {/* Recent Posts */}
-                <section className="w-full flex flex-col items-center gap-10 mt-20 padding-x">
+                <section className="w-full flex flex-col items-center gap-18 mt-20 padding-x">
 
                     <header className="container flex items-center justify-between">
 
@@ -215,8 +216,8 @@ function Home() {
                                     <header className="w-full flex flex-col gap-3">
 
                                         <div className="w-full flex gap-3 mt-5">
-                                            <span className="text-xs font-bold text-black-2">{firstRecentPost.category}</span>
-                                            <span className="text-xs font-medium text-[#999999]">{firstRecentPost.date}</span>
+                                            <p className="text-xs font-bold text-black-2">{firstRecentPost.category}</p>
+                                            <p className="text-xs font-medium text-[#999999]">{firstRecentPost.date}</p>
                                         </div>
 
                                         <h3 className="font-bold md:text-lg lg:text-3xl">{firstRecentPost.title}</h3>
@@ -226,7 +227,7 @@ function Home() {
                                         {firstRecentPost.description}
                                     </p>
 
-                                    <Link to={firstRecentPost.link} className="font-bold lg:text-lg text-primary border border-primary rounded-lg px-7 py-2.5 w-fit">
+                                    <Link to={firstRecentPost.link} className="font-bold text-primary border border-primary rounded-lg px-7 py-2.5 w-fit">
                                         Read More...
                                     </Link>
 
@@ -252,7 +253,7 @@ function Home() {
 
                     </header>
 
-                    <div className="container grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="container grid gap-x-4 gap-y-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         { popularPosts.map( post => <Post key={`popularPost-${post.id}`} {...post} />  ) }
                     </div>
 

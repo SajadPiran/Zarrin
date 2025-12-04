@@ -17,15 +17,15 @@ function Post( { title , description , category , date , link , src , alt , capt
             <header className="w-full flex flex-col gap-3">
                 <Image src={src} alt={alt} caption={caption} style={style} />
 
-                <div className="w-full flex gap-3 mt-5">
-                    <span className="text-xs font-bold text-black-2">{category}</span>
-                    <span className="text-xs font-medium text-[#999999]">{date}</span>
-                </div>
+                <ul className="w-full flex gap-3 mt-5">
+                    <li className="text-xs font-bold text-black-2">{category}</li>
+                    <li className="text-xs font-medium text-[#999999]">{date}</li>
+                </ul>
 
                 <h3 className="font-bold md:text-lg lg:text-2xl">{title}</h3>
             </header>
 
-            <section className="w-full flex flex-col gap-5">
+            <section className="w-full h-full flex flex-col justify-between gap-5">
 
                 <p className="text-xs md:text-sm lg:text-base text-[#666666] leading-7 line-clamp-3">
                     {description}
