@@ -6,10 +6,10 @@ function Header(){
             <div className="container flex items-center justify-between">
 
                 {/* Logo */}
-                <div className="flex gap-2.5 select-none">
+                <Link to='/' className="flex gap-2.5">
                     <img className="w-8 h-8" src="/assets/icons/logo.svg" alt="" loading="lazy"/>
                     <span className="font-extrabold text-2xl">Zarrin</span>
-                </div>
+                </Link>
 
                 {/* Menu Button */}
                 <button type="button" className="xl:hidden w-9 h-9 bg-transparent border-none outline-none">

@@ -134,7 +134,7 @@ function Blogs(){
 
                 <h1 className="sr-only">Blogs Page</h1>
                 <header className="w-full flex flex-col items-center gap-3 padding-x">
-                    <small className="text-xs text-[#666666] font-bold">OUR BLOGS</small>
+                    <p className="text-xs text-[#666666] font-bold">OUR BLOGS</p>
                     <h2 className="max-w-[195px] md:max-w-none font-bold text-2xl text-black-2 md:text-3xl xl:text-4xl text-center">Find our all blogs from here</h2>
                     <p className="max-w-[531px] text-xs text-[#666666] text-center mt-2.5 leading-6">our blogs are written from very research research and well known writers writers so that  we can provide you the best blogs and articles articles for you to read them all along</p>
                 </header>

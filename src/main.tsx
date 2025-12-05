@@ -5,9 +5,9 @@ import './assets/css/style.css'
 import {BrowserRouter} from "react-router-dom";
 
 createRoot(document.getElementById('root')!).render(
-    <BrowserRouter>
-        <StrictMode>
+    <StrictMode>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <App />
-        </StrictMode>
-    </BrowserRouter>
+        </BrowserRouter>
+    </StrictMode>
 )
