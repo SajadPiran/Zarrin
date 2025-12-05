@@ -1,7 +1,7 @@
-import Image, {type ImageProps} from "./Image.tsx";
+import Image, {type ImageType} from "./Image.tsx";
 import {Link} from "react-router-dom";
 
-type PostType = ImageProps & {
+type PostType = ImageType & {
     id : string | number;
     title : string;
     description : string;

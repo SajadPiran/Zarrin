@@ -64,8 +64,8 @@
         position: absolute;
         left: 10px;
         top: clamp(15px , 10% , 50px);
-        width: clamp(10px , 10% , 30px);
-        height: clamp(10px , 10% , 30px);
+        width: clamp(10px , 10% , 20px);
+        height: clamp(20px , 10% , 30px);
         border-radius: 50%;
         background: var(--color-primary);
         transform: rotate(0deg);
@@ -111,6 +111,15 @@
     .lazy-image-loader.fade {
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
+    }
+    .post-content p {
+        @apply text-sm xl:text-base text-[#666666] leading-6.5 xl:leading-8 my-8;
+    }
+    .post-content .quote{
+        @apply max-w-[920px] pl-2 border-l-2 border-l-primary;
+    }
+    .post-content .quote p{
+        @apply text-lg xl:text-2xl leading-9 xl:leading-12 italic mt-0 mb-2.5;
     }
 }
 #hero-section::before , #hero-section::after,

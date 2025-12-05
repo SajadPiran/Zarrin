@@ -14,7 +14,7 @@ function Home() {
             src : './assets/images/posts/minh-pham-HI6gy-p-WBI-unsplash.webp',
             alt : 'how-to-make-a-game-look-more-attractive-with-new-vr-and-ai-technology',
             caption : 'how-to-make-a-game-look-more-attractive-with-new-vr-and-ai-technology',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -28,7 +28,7 @@ function Home() {
             src : './assets/images/posts/shifaaz-shamoon-qtbV_8P_Ksk-unsplash.webp',
             alt : 'travelling-in-sea-you-need-to-know',
             caption : 'travelling-in-sea-you-need-to-know',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -42,7 +42,7 @@ function Home() {
             src : './assets/images/posts/carl-heyerdahl-KE0nC8-58MQ-unsplash.webp',
             alt : 'how-to-build-strong-portfolio-and-get-a-job-in-ui-ux',
             caption : 'how-to-build-strong-portfolio-and-get-a-job-in-ui-ux',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -56,7 +56,7 @@ function Home() {
             src : './assets/images/posts/jack-monach-5gcM189YA7o-unsplash.webp',
             alt : 'how-to-be-a-professional-footballer-in-2023',
             caption : 'how-to-be-a-professional-footballer-in-2023',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -81,7 +81,7 @@ function Home() {
             src : './assets/images/posts/martin-sanchez-pfkzBUh4KyA-unsplash.webp',
             alt : 'train-or-bus-journey-which-one-suits',
             caption : 'train-or-bus-journey-which-one-suits',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -94,7 +94,7 @@ function Home() {
             src : './assets/images/posts/igor-miske-JVSgcV8_vb4-unsplash.webp',
             alt : 'best-website-to-research-for-your-next-project',
             caption : 'best-website-to-research-for-your-next-project',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -107,7 +107,7 @@ function Home() {
             src : './assets/images/posts/breakreate-tFA3kJcMUco-unsplash.webp',
             alt : 'how-to-be-a-dancer-in-2023-with-proper-skills',
             caption : 'how-to-be-a-dancer-in-2023-with-proper-skills',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -120,7 +120,7 @@ function Home() {
             src : './assets/images/posts/austin-neill-hgO1wFPXl3I-unsplash.webp',
             alt : 'who-is-the-best-singer-on-chart-know-him',
             caption : 'who-is-the-best-singer-on-chart-know-him',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -133,7 +133,7 @@ function Home() {
             src : './assets/images/posts/Image Placeholder.png',
             alt : 'how-to-start-export-import-business-from-home',
             caption : 'how-to-start-export-import-business-from-home',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'
@@ -146,7 +146,7 @@ function Home() {
             src : './assets/images/posts/Image Placeholder2.png',
             alt : 'make-some-drinks-with-chocolates-chocolates-and-milk',
             caption : 'make-some-drinks-with-chocolates-chocolates-and-milk',
-            link : 'post',
+            link : '/post',
             style : {
                 figure : 'w-full h-[250px] xl:h-[300px] 2xl:h-[360px] rounded-2xl overflow-hidden',
                 image : 'w-full h-full'

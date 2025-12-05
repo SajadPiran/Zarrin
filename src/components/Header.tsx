@@ -23,12 +23,12 @@ function Header(){
                     <nav>
                         <ul className="flex gap-10">
                             <li>
-                                <Link to='blogs' className="font-medium text-xs hover:text-primary transition-colors duration-200">
+                                <Link to='/blogs' className="font-medium text-xs hover:text-primary transition-colors duration-200">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link to='about-us' className="font-medium text-xs hover:text-primary transition-colors duration-200">
+                                <Link to='/about-us' className="font-medium text-xs hover:text-primary transition-colors duration-200">
                                     About
                                 </Link>
                             </li>

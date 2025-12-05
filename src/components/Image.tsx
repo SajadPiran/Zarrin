@@ -1,6 +1,6 @@
 import {useLazyLoad} from "../hooks/useLazyLoad.tsx";
 import {useEffect, useRef} from "react";
-type ImageProps = {
+type ImageType = {
     src : string,
     alt : string,
     caption : string,
@@ -10,7 +10,7 @@ type ImageProps = {
     }
 }
 
-function Image( { src, alt , caption , style }  : ImageProps ){
+function Image( { src, alt , caption , style }  : ImageType ){
 
     const [ref , visible] = useLazyLoad( { threshold : 0.5 } );
     const imageRef = useRef<HTMLImageElement>(null);
@@ -40,5 +40,5 @@ function Image( { src, alt , caption , style }  : ImageProps ){
     )
 
 }
-export type {ImageProps};
+export type {ImageType};
 export default Image;
